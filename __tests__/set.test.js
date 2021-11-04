@@ -112,9 +112,8 @@ describe('Тестирование множества Set', () => {
     const newSet = new mySet();
     const res = String(newSet);
 
-    console.log(Object.prototype.toString.call(newSet))
-
     const expected = '[object ^_^]';
     expect(res).toEqual(expected);
+    expect(Object.prototype.toString.call(newSet)).toEqual(expected);
   });
 })
