@@ -28,13 +28,13 @@ describe('Тестирование множества Set', () => {
     expect([...newSet]).toEqual(expected);
   });
 
-  // it('Set хранит только уникальные значения', () => {
-  //   const newSet = new mySet([5, 1, 2, 3, 4, 4, 5 ]);
+  it('Set хранит только уникальные значения', () => {
+    const newSet = new mySet([5, 1, 2, 3, 3, 4, 4, 5 ]);
 
-  //   const expected = [ 1, 2, 3 ];
+    const expected = [ 5, 1, 2, 3, 4 ];
 
-  //   expect([...newSet]).toEqual(expected);
-  // });
+    expect([...newSet]).toEqual(expected);
+  });
 
   it('Метод clear очищает значения в Set', () => {
     const newSet = new mySet([1, 2, 3]);
