@@ -2,7 +2,9 @@ module.exports = class {
   #collection = [];
 
   constructor(collection = []) {
-    this.#collection = collection.filter((item, pos) => collection.indexOf(item) === pos);;
+    for (let element of collection) {
+      this.add(element);
+    }
   }
 
   *values() {
@@ -47,7 +49,7 @@ module.exports = class {
   }
 
   add(element) {
-    if (!this.has(element)) {
+    if (!this.#collection.includes(element)) {
       this.#collection.push(element);
       return this;
     }
