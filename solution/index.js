@@ -44,6 +44,15 @@ module.exports = class {
     this.collection.length = 0;
   }
 
+  delete(element) {
+    if (this.has(element)) {
+      let index = this.collection.indexOf(element);
+      this.collection.splice(index, 1);
+      return this;
+    }
+    return this;
+  }
+
   add(element) {
     if (!this.has(element)) {
       this.collection.push(element);
