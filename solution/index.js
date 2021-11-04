@@ -62,4 +62,8 @@ module.exports = class {
     }
   }
 
+  toString() {
+    return `[object ^_^]`;
+  }
+
 }
