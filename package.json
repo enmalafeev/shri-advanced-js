@@ -1,13 +1,13 @@
 {
   "name": "shri-advanced-js",
   "version": "1.0.0",
-  "description": "",
+  "description": "class mySet is implementation of Set JS",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "Malafeev Evegeny",
   "license": "ISC",
   "devDependencies": {
     "jest": "^27.3.1"
