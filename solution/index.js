@@ -1,5 +1,6 @@
 module.exports = class {
   #collection = [];
+  #name = '^_^';
 
   constructor(collection = []) {
     for (let element of collection) {
@@ -62,8 +63,7 @@ module.exports = class {
     }
   }
 
-  toString() {
-    return `[object ^_^]`;
+  get [Symbol.toStringTag]() {
+    return this.#name;
   }
-
 }
