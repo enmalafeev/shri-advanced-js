@@ -54,4 +54,10 @@ module.exports = class {
     return this;
   }
 
+  forEach(callback, data) {
+    for (let element of this.#collection) {
+      callback.bind(data)(element);
+    }
+  }
+
 }
