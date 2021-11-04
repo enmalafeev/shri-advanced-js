@@ -76,4 +76,30 @@ describe('Тестирование множества Set', () => {
 
     expect(res).toEqual(expected);
   });
+
+  it('Метод forEach вызывается для объекта без потери контекста', () => {
+    const newSet = new mySet();
+
+    const object = {
+      getValue () { return this.value }
+    }
+  
+    const data = {
+      value: 42
+    }
+
+    let res = [];
+
+    newSet.add(object);
+
+    newSet.forEach(function (item) {
+      res.push(item.getValue.call(this));
+    }, data);
+
+    const expected = [42];
+
+    expect(res).toEqual(expected);
+  });
+
+
 })
