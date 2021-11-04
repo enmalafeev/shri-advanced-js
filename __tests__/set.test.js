@@ -101,5 +101,20 @@ describe('Тестирование множества Set', () => {
     expect(res).toEqual(expected);
   });
 
+  it('Проверка valueOf', () => {
+    const newSet = new mySet();
+    console.log(newSet.valueOf())
 
+    expect(newSet).toEqual(newSet.valueOf());
+  });
+
+  it('Проверка приведения к строке', () => {
+    const newSet = new mySet();
+    const res = String(newSet);
+
+    console.log(Object.prototype.toString.call(newSet))
+
+    const expected = '[object ^_^]';
+    expect(res).toEqual(expected);
+  });
 })
