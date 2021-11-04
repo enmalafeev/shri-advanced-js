@@ -45,5 +45,14 @@ describe('Тестирование множества Set', () => {
 
     expect(newSet.size()).toEqual(0);
   });
+
+  it('Метод delete удаляет значения в Set', () => {
+    const newSet = new mySet([1, 2, 3]);
+
+    newSet.delete(2);
+    const expected = [ 1, 3 ];
+
+    expect([...newSet]).toEqual(expected);
+  });
   
 })
