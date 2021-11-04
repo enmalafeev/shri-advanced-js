@@ -54,5 +54,26 @@ describe('Тестирование множества Set', () => {
 
     expect([...newSet]).toEqual(expected);
   });
-  
+
+  it('Метод values возвращает значения Set', () => {
+    const newSet = new mySet([1, 2, 3]);
+
+    const expected = [ 1, 2, 3 ];
+
+    expect([...newSet]).toEqual(expected);
+  });
+
+  it('Метод entries возвращает entries Set', () => {
+    const newSet = new mySet([1, 2, 3]);
+
+    let res = [];
+
+    for (let el of newSet.entries()) {
+      res.push(el)
+    }
+
+    const expected = [[1, 1], [2, 2], [3, 3]];
+
+    expect(res).toEqual(expected);
+  });
 })
